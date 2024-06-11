@@ -25,6 +25,7 @@ class ShowUser(BaseModel):
         orm_mode = True
 
 class ShowBlog(BaseModel):
+    id: int
     title: str
     desc: str
     creator: ShowUser

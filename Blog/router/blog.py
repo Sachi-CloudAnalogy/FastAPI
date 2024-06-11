@@ -57,9 +57,15 @@ def update(id: int, request: schemas.Blog, db: Session = Depends(get_db), curren
     # blog = db.query(models.Blog).filter(models.Blog.id == id)
     # if not blog.first():
     #     raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Blog with the id {id} doesn't exist")
-    
+
     # blog.update(request.dict(), synchronize_session=False)
     # db.commit()
-    # db.refresh(blog) 
-    # return blog
 
+    # updated_blog = blog.first()
+
+    # return {
+    #     "updated_blog": updated_blog
+    # }
+
+    # # db.refresh(blog) 
+    # # return blog
