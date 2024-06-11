@@ -23,3 +23,4 @@ def verify_token(token: str, credentials_exception):
         token_data = schemas.TokenData(email=email)
     except jwt.InvalidTokenError:
         raise credentials_exception
+
